@@ -10,7 +10,21 @@
 	],
 	"license": "MIT",
 	"author": "Mehdi Bennouna",
+	"sideEffects": false,
 	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs",
+			"default": "./dist/index.mjs"
+		},
+		"./package.json": "./package.json"
+	},
+	"main": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "tsdown",
 		"lint": "eslint src/index.ts",
@@ -23,10 +37,12 @@
 		"@ianvs/prettier-plugin-sort-imports": "^4.7.1",
 		"@stylistic/eslint-plugin": "^5.10.0",
 		"@types/node": "^24",
+		"arktype": "^2.2.3",
 		"eslint": "^10.8.1",
 		"eslint-import-resolver-typescript": "^4.4.5",
 		"eslint-plugin-import-x": "^4.17.1",
 		"eslint-plugin-unicorn": "^73.0.0",
+		"fastify": "^5.12.1",
 		"husky": "^9.1.7",
 		"jiti": "^2.7.0",
 		"lint-staged": "^17.3.0",
@@ -36,11 +52,16 @@
 		"typescript": "^6",
 		"typescript-eslint": "^8.62.1"
 	},
+	"peerDependencies": {
+		"arktype": "^2.0.0",
+		"fastify": "^5.0.0"
+	},
 	"devEngines": {
 		"packageManager": {
 			"name": "pnpm",
 			"version": "^11.5.2",
 			"onFail": "download"
 		}
-	}
+	},
+	"prepublishOnly": "pnpm run build"
 }
