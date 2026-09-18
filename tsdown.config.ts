@@ -15,5 +15,6 @@ export const config: UserConfig = {
 	shims: true,
 
 	unbundle: false,
+
 	deps: { neverBundle: true },
 };
