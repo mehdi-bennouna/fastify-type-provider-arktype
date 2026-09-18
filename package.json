@@ -1,5 +1,5 @@
 {
-	"name": "fastify-type-provider-arktype",
+	"name": "@azpect/fastify-type-provider-arktype",
 	"version": "0.0.1",
 	"description": "Arktype Type Provider for Fastify@5",
 	"keywords": [
@@ -62,6 +62,9 @@
 			"version": "^11.5.2",
 			"onFail": "download"
 		}
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"prepublishOnly": "pnpm run build"
 }
