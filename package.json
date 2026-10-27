@@ -8,6 +8,10 @@
 		"type",
 		"provider"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mehdi-bennouna/fastify-type-provider-arktype.git"
+	},
 	"license": "MIT",
 	"author": "Mehdi Bennouna",
 	"sideEffects": false,
