@@ -1,6 +1,6 @@
 {
 	"name": "@azpect/fastify-type-provider-arktype",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Arktype Type Provider for Fastify@5",
 	"keywords": [
 		"fastify",
