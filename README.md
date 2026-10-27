@@ -1,4 +1,4 @@
-# @azpect/fastify-type-provider-arktype
+# @mehdi-bennouna/fastify-type-provider-arktype
 
 A [Fastify](https://fastify.dev) type provider for [ArkType](https://arktype.io).
 
@@ -15,7 +15,7 @@ Use ArkType schemas to validate requests and serialize responses, with full type
 ## Installation
 
 ```bash
-npm install @azpect/fastify-type-provider-arktype
+npm install @mehdi-bennouna/fastify-type-provider-arktype
 ```
 
 `fastify` and `arktype` are peer dependencies, so install them alongside it if you haven't already:
@@ -32,7 +32,7 @@ npm install fastify arktype
 ## Quick start
 
 ```ts
-import { serializerCompiler, validatorCompiler, type ArkTypeProvider } from "@azpect/fastify-type-provider-arktype";
+import { serializerCompiler, validatorCompiler, type ArkTypeProvider } from "@mehdi-bennouna/fastify-type-provider-arktype";
 import { type } from "arktype";
 import Fastify from "fastify";
 
@@ -125,7 +125,7 @@ When a handler lives outside the route definition, the typed helpers keep infere
 A `FastifyInstance` preconfigured with `ArkTypeProvider`. Use it for plugins and route modules:
 
 ```ts
-import type { FastifyInstanceArkType } from "@azpect/fastify-type-provider-arktype";
+import type { FastifyInstanceArkType } from "@mehdi-bennouna/fastify-type-provider-arktype";
 
 export async function userRoutes(app: FastifyInstanceArkType) {
 	app.get("/users", { schema: { response: { 200: type("string[]") } } }, async () => []);
@@ -137,7 +137,7 @@ export async function userRoutes(app: FastifyInstanceArkType) {
 Typed request and reply objects for a given schema:
 
 ```ts
-import type { FastifyReplyArkType, FastifyRequestArkType } from "@azpect/fastify-type-provider-arktype";
+import type { FastifyReplyArkType, FastifyRequestArkType } from "@mehdi-bennouna/fastify-type-provider-arktype";
 import { type } from "arktype";
 import type { FastifySchema } from "fastify";
 

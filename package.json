@@ -1,5 +1,5 @@
 {
-	"name": "@azpect/fastify-type-provider-arktype",
+	"name": "@mehdi-bennouna/fastify-type-provider-arktype",
 	"version": "0.0.2",
 	"description": "Arktype Type Provider for Fastify@5",
 	"keywords": [
